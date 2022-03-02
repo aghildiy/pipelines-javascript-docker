@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: aghildiypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aghildiypipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: aghildiypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: aghildiypipelinesjavascriptdocker 
+          image: ecmcontainerregistry.azurecr.io/aghildiypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
